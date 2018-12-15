@@ -23,18 +23,17 @@ void sort (int *A, int N) {
     swaps = 0;
 
     int step = N - 1;
-    double fakt = 1.2473309;
+    double factor = 1.2473309;
 
     while (step >= 1) {
         for (int i = 1; i + step < N; ++i) {
-            round(step);
             comps++;
             if (A[i] > A[i + step]) {
                 swap(&A[i], &A[i + step]);
                 swaps++;
             }
         }
-        step /= fakt;
+        step /= factor;
     }
 
     for (int i = 1; i < N; i++) {
